@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="styles/stylesheet.css">
+	<link rel="stylesheet" type="text/css" href="bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="fonts/font-awesome.css">
+	<title>Portafolio Tatiana</title>
+</head>
+<body>
+
+<header class="navbar navbar-default navbar-fixed-top" id="banner">
+  <div class="container"><a class="scrollable" href="#top"><img src="./imagenes/imagen.gif" alt="Tatiana Paredes | UI/UX Design and Development" title="Estudiante| Ingenieria de Sistemas"/></a>
+    <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target="#navbar" aria-expanded="false"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
+    <nav class="collapse navbar-collapse" id="navbar" role="navigation">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a class="scrollable" href="#top">PERFIL</a></li>
+        <li><a class="scrollable" href="#portfolio">PORTAFOLIO</a></li>
+        <li><a class="scrollable" href="#contact">CONTACTO</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+<!-- end header--><a id="top" name="home"></a>
+<main>
+  <header>
+    <div class="intro-text">
+      <p>Hola mi nombre es Tatiana, soy una profesional capaz de modelar estructuras y procesos organizativos, diseñar y administrar los recursos de tecnología de información.</p>
+      <hr class="star-bright"/><span class="skills">Css- Html5- Javascript</span>
+    </div><img src="./imagenes/perfil.jpg" alt="Tatiana Ruiz" title="Tatiana Ruiz"/>
+  </header>
+  <!-- Gallery Grid Section-->
+  <section id="portfolio">
+    <h2>PORTAFOLIO</h2>
+    <hr class="star-dark"/>
+    <ul class="grid">
+      <li><img src="./imagenes/Titulo_tecnologo.png" alt=""title="Título del Tecnólogo""/></li>
+      <li><img src="./imagenes/acta_de_grado.png" alt=""title="Acta de grado""/></li>
+      <li><img src="./imagenes/Itinerario.png" alt=""title="Itinerario de Notas""/></li>
+      <li><img src="./imagenes/Informacion_Academica.png" alt=""title="Formación Academica""/></li>
+      <li><img src="./imagenes/perfil_profesional.png" alt=""title="Perfil profesional""/></li>
+      <li><img src="./imagenes/Experiencia_Laboral.png" alt=""title="Experiencia Laboral""/></li>
+    </ul>
+  </section>
+  <!-- Contact Section-->
+  <section id="contact">
+    <h2>CONTÁCTAME</h2>
+    <hr class="star-dark"/>
+    <div>
+      <form id="contactForm" novalidate="">
+        <div class="form-item">
+          <label for="“Nombre”">Name</label>
+          <input id="Nombre" type="text" placeholder="Nombre" required=""/>
+        </div>
+        <div class="form-item">
+          <label for="“Correo Electronico”">Email Address</label>
+          <input id="Correo Electronico" type="email" placeholder="Correo Electronico" required=""/>
+        </div>
+        <div class="form-item">
+          <label for="“Numero de Telefono”">Phone Number</label>
+          <input id="Numero de Telefono" type="tel" placeholder="Numero de Telefono" required=""/>
+        </div>
+        <div class="form-item">
+          <label for="“Mensaje”">Message</label>
+          <textarea id="Mensaje" rows="5" placeholder="Mensaje" required=""></textarea>
+        </div><br/>
+        <button type="submit">Enviar</button>
+      </form>
+      <div>
+        <p>Puedes escribirme  para solicitar más información sobre mí o mi experiencia, simplemente mándame  un mensaje  en cualquier momento.</p>
+        <p>prometo responder en maximo un dia</p>
+       
+      </div>
+    </div>
+  </section>
+  <!-- Scroll to Top Button (Only supposed to be visible on small and small screen sizes)-->
+  <div class="scroll-top"><a class="button scrollable" href="#top"><i class="fa fa-chevron-up"></i></a></div>
+</main>
+<!-- Footer-->
+<footer>
+  <div id="footer-above">
+    <div>
+      <h3>Mas informacion de la pagina</h3>
+      <p>Hecho con <i class="fa fa-fw fa-coffee"></i> y <i class="fa fa-fw fa-music"></i><br/> por <a href="file:///D:/PORTAFOLIO%20TATIANA/index.html">Tatiana Paredes</a></p>
+    </div>
+    <div>
+      <h3>sígueme en </h3>
+      <ul>
+        <li><a class="button social" href="https://www.linkedin.com/feed/"><i class="fa fa-fw fa-linkedin"></i></a></li>
+        <li><a class="button social" href="https://www.facebook.com/TatianaRuizParedes"><i class="fa fa-fw fa-facebook"></i></a></li>
+        <li><a class="button social" href="https://twitter.com/tatiannapareds"><i class="fa fa-fw fa-twitter"></i></a></li>
+        
+      </ul>
+    </div>
+  </div>
+  <div id="footer-below">Tatiana © 
+    <script>document.write(new Date().getFullYear())</script>. All Rights Reversed
+  </div>
+</footer>
+<!-- <aside id="html5badge"><img src="http://www.w3.org/html/logo/badge/html5-badge-v-css3-graphics-semantics.png" width="38" height="170" alt="HTML5 Powered with CSS3 / Styling, Graphics, 3D &amp; Effects, and Semantics" title="HTML5 Powered with CSS3 / Styling, Graphics, 3D &amp; Effects, and Semantics"></aside>-->
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="jquery-easing.js"></script>
+<script type="text/javascript" src="bootstrap.js"></script>
+<script type="text/javascript" src="main.js"></script>
+</body>
+</html>
