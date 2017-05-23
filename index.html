@@ -1,6 +1,14 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="contact form example">
+   <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/pure-min.css">
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+   <!-- Style The Contact Form How Ever You Prefer -->
+   <link rel="stylesheet" href="https://cdn.rawgit.com/dwyl/html-form-send-email-via-google-script-without-server/master/style.css">
+
 	<link rel="stylesheet" type="text/css" href="styles/stylesheet.css">
 	<link rel="stylesheet" type="text/css" href="bootstrap.css">
 	<link rel="stylesheet" type="text/css" href="fonts/font-awesome.css">
@@ -43,33 +51,60 @@
   </section>
   <!-- Contact Section-->
   <section id="contact">
-    <h2>CONTÁCTAME</h2>
-    <hr class="star-dark"/>
+    
+    <h2 class="content-head is-center"> CONTÁCTAME!</h2>
     <div>
-      <form id="contactForm" novalidate="">
-        <div class="form-item">
-          <label for="“Nombre”">Name</label>
-          <input id="Nombre" type="text" placeholder="Nombre" required=""/>
-        </div>
-        <div class="form-item">
-          <label for="“Correo Electronico”">Email Address</label>
-          <input id="Correo Electronico" type="email" placeholder="Correo Electronico" required=""/>
-        </div>
-        <div class="form-item">
-          <label for="“Numero de Telefono”">Phone Number</label>
-          <input id="Numero de Telefono" type="tel" placeholder="Numero de Telefono" required=""/>
-        </div>
-        <div class="form-item">
-          <label for="“Mensaje”">Message</label>
-          <textarea id="Mensaje" rows="5" placeholder="Mensaje" required=""></textarea>
-        </div><br/>
-        <button type="submit">Enviar</button>
-      </form>
-      <div>
-        <p>Puedes escribirme  para solicitar más información sobre mí o mi experiencia, simplemente mándame  un mensaje  en cualquier momento.</p>
-        <p>prometo responder en maximo un dia</p>
-       
-      </div>
+   
+  <aside>
+       <p align="center">Me encantaría <em></em> que me escribieras! </p>
+           <p>Por favor utiliza el  <b><em>Formulario de Contacto</em></b>
+           para enviarme un mensaje.
+       </p>
+   </aside>
+   
+  <form id="gform" method="POST" class="pure-form pure-form-stacked"
+  action="https://script.google.com/macros/s/AKfycbyKdIoPj8vk3Vcem6guPZPoHJWn7y4BFMQ8pYfYX4A3I9OEeUIK/exec">
+    <!-- change the form action to your script url -->
+
+    <fieldset class="pure-group">
+      <label for="Nombre">Nombre: </label>
+      <input id="Nombre" name="name" placeholder="cual es tu nombre" />
+    </fieldset>
+
+    <fieldset class="pure-group">
+      <label for="Mensaje">Mensaje: </label>
+      <textarea id="Mensaje" name="message" rows="10"
+      placeholder="Cuéntame lo que piensas..."></textarea>
+    </fieldset>
+
+    <fieldset class="pure-group">
+      <label for="email">Correo Electrónico:</label>
+      <input id="email" name="email" type="email" value=""
+      required placeholder="ejemplo@gmail.com"/>
+      <span id="email-invalid" style="visibility:hidden">
+        Escriba una dirección de correo valida</span>
+    </fieldset>
+
+    <fieldset class="pure-group">
+      <label for="color">Color Favorito: </label>
+      <input id="color" name="color" placeholder="rosado" />
+    </fieldset>
+
+    <button class="button-success pure-button button-xlarge">
+      <i class="fa fa-paper-plane"></i>&nbsp;Enviar</button>
+
+  </form>
+  
+  <!-- Customise the Thankyou Message People See when they submit the form: -->
+  <div style="display:none;" id="thankyou_message">
+    <h4><em>Gracias</em> por ponerse en contacto!
+      Me pondre en contacto con usted pronto!</h4>
+  </div>
+
+  <!-- Submit the Form to Google Using "AJAX" -->
+  <script data-cfasync="false" type="text/javascript"
+  src="https://cdn.rawgit.com/dwyl/html-form-send-email-via-google-script-without-server/master/form-submission-handler.js"></script>
+      
     </div>
   </section>
   <!-- Scroll to Top Button (Only supposed to be visible on small and small screen sizes)-->
